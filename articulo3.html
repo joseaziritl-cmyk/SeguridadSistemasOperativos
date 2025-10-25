@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Moderno y Minimalista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<header class="navbar-modern">
+    <div class="navbar-brand">
+        <h1 class="nav-title">Blog Unidad 9: Seguridad en Sistemas Operativos</h1>
+        <span class="nav-authors">Realizado por: José Zirit, Juan Zarraga, José Chirino y Ricardo Montilla</span>
+    </div>
+    
+    <nav class="navbar-nav">
+        <a href="index.html" class="nav-button">Inicio</a>
+    </nav>
+</header>
+
+    <main class="main-content">
+        
+       <article class="articulo ">
+    <div class="contenido-arti">
+        
+        <h2>Gestión del Procesador y la Memoria: Protección de Memoria en Sistemas Multiproceso</h2>
+        <br>
+        <img src="https://www.redusers.com/noticias/wp-content/uploads/2021/09/Figura-00.jpg" alt="Imagen del artículo principal"><br>
+        <p class="meta2">Por Juan Zárraga | Octubre 24, 2025</p><br>
+        
+        <p style="text-align: justify;">En un sistema multiproceso, la protección de memoria se divide en dos categorías: la protección entre procesos y la protección del sistema operativo (kernel) frente a los procesos.
+<br><br><b>Protección entre Procesos</b><br><br>
+Los procesos utilizan direcciones virtuales, que son traducidas a direcciones físicas mediante una unidad de gestión de memoria (MMU). Cada proceso posee un espacio de direcciones virtuales único, lo que impide que un proceso acceda a la memoria de otro. Durante un cambio de contexto, se actualiza la tabla de páginas que mapea estas direcciones, garantizando así la seguridad y el aislamiento entre procesos.
+<br><br><b>Protección del Kernel</b><br><br>
+El kernel no opera como un proceso aislado; debe permitir que ciertos componentes sean ejecutados por los procesos, protegiendo al mismo tiempo su propio espacio de memoria. Para ello, se implementan niveles de privilegio de ejecución, donde existen dos niveles: el nivel de kernel y el nivel de usuario. El nivel de kernel permite ejecutar instrucciones privilegiadas y acceder a todos los registros, mientras que el acceso a áreas del kernel está restringido. Cuando un proceso intenta acceder a una zona de memoria, se verifica su nivel de privilegio; si no es suficiente, se lanza una excepción.
+El kernel tiene su propia tabla de traducción de direcciones, que permanece constante durante los cambios de contexto y se activa cuando el control pasa al kernel. El cambio al modo kernel se realiza a través de puntos de entrada específicos mediante llamadas al sistema.
+
+<br><br><b>Funciones Básicas de un Sistema Operativo</b><br><br>
+Las funcionalidades de un sistema operativo se pueden clasificar en cuatro grupos principales:
+<br><br>      1. Gestión del Procesador y la Memoria: Asegura que cada proceso reciba tiempo del procesador y gestiona la asignación de memoria.
+<br><br>      2. Gestión de Sistemas de Almacenamiento: Define cómo se almacenan los datos.
+<br><br>      3. Gestión de Entrada/Salida: Administra la interacción entre hardware y aplicaciones.
+<br><br>      4. Gestión de la Red: Facilita la comunicación en red entre aplicaciones, destacándose como una función crítica.
+
+</p>
+
+        <h3 style="text-align: left; margin-top: 20px;">Referencias Bibliográficas</h3><br>
+        <ul style="text-align: left;">
+            <p> - Gracia Fernández López, 2007 “Seguridad en Sistemas Operativos” Universidad de Coruña, Facultad de Informática.</p><br>
+        </ul>
+
+    </div>
+</article>
+ 
+
+    </main>
+
+    <footer class="footer">
+        <p style="color: #ffffff;">&copy; 2025 Seguridad en sistemas operativos. </p>
+    </footer>
+
+</body>
+</html>

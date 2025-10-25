@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Moderno y Minimalista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<header class="navbar-modern">
+    <div class="navbar-brand">
+        <h1 class="nav-title">Blog Unidad 9: Seguridad en Sistemas Operativos</h1>
+        <span class="nav-authors">Realizado por: José Zirit, Juan Zarraga, José Chirino y Ricardo Montilla</span>
+    </div>
+    
+    <nav class="navbar-nav">
+        <a href="index.html" class="nav-button">Inicio</a>
+    </nav>
+</header>
+
+    <main class="main-content">
+        
+       <article class="articulo ">
+    <div class="contenido-arti">
+        
+        <h2>Tips de seguridad de los sistemas operativos</h2>
+        <br>
+        <img src="https://cdn-icons-png.flaticon.com/512/17810/17810684.png" style="height: 500px;" alt="Imagen del artículo principal"><br>
+        <p class="meta2">Por Ricardo Montilla | Octubre 24, 2025</p>
+        
+        <p style="text-align: justify;"><br><br><b> - Cuentas de usuario</b><br><br>
+
+Asegúrese de que sólo unos cuantos usuarios de confianza tengan acceso administrativo a los sistemas servidores.
+Asigne los permisos de acceso minImos necesarios para la cuenta que ejecuta
+la aplicación.
+
+<br><br><b> - Políticas de las cuentas </b><br><br>
+
+Desarrolle y administre políticas de contraseña que promuevan la seguridad del
+sistema operativo.
+Ejemplos de dichas políticas son la regla de contraseña segura y la planificación de cambio de contraseña.
+Compruebe la fortaleza de las contraseñas de los usuarios descifrando las contraseñas.
+Los usuarios que no cumplan con la regla de contraseña segura recibirán una notificación para actualizar sus contraseñas seaún la política de contraseñas de la
+organización
+Hay software disponible que le ayudará a realizar esta tarea. En sistema
+operativo UNIX, active el archivo de contraseña duplicado.
+<br><br><b> - Sistema de archivos </b><br><br>
+Otorgue a los usuarios permisos de sólo lectura para los directorios necesarios.
+SI los atacantes obtienen acceso a una aplicacion, tendran los permisos de usuario.
+Denieque el acceso de forma predeterminada
+El acceso a los recursos se deniega a todos los usuarios excepto a los que se concede acceso explícitamente.
+Puede denegar los permisos de lectura y escritura para todas las estructuras de directorios a todos los usuarios. Sólo los usuarios a los que se otorgan estos permisos explícitamente tienen acceso a los directorios y archivos. Esta política también protege los recursos que un administrador ha pasado por alto.
+<br><br><b> - Servicios de red</b><br><br>
+Proporcione el número mínimo de servicios necesarios en el sistema servidor.
+Utilice sólo los servicios que necesita para ejecutar la aplicación. Cada servicio es un punto de entrada potencial para un ataque malintencionado.
+Reduzca el nivel de permisos de acceso para los usuarios de los servicios de red
+Asegúrese de que las cuentas de usuario que tienen acceso al servicio web no tengan acceso a las funciones de shell. <br> <br>
+Reduzca el número de puertos de confianza especificados en el archivo
+reic/services.
+ <br> <br>Suprima o marque como comentario los puertos que no tenga previsto utilizar para eliminar los posibles puntos de entrada al sistema.
+rotela e sistema trente a las amenazas a Netbios asociadas con los puertos
+137, 138 y 139.
+Estos puertos se enumeran en el archivo /etc/services.
+Utilice los servicios de derivador, como iptables. <br> <br>
+Asegúrese de que los servicios son actuales comprobando con frecuencia si hay actualizaciones de seguridad.
+(GUI)
+Evite, si es posible, utilizar servicios que tengan una interfaz gráfica de usuario
+Parches del sistema <br> <br>
+Ejecute los parches más recientes recomendados por el proveedor para el sistema operativo.
+Los parches pueden ser parches de sistema operativo principales, o parches necesarios para las aplicaciones adicionales.
+Planifique el mantenimiento regular de los parches de seguridad.
+<br><br><b> - Minimización del sistema operativo </b><br><br> 
+Elimine las aplicaciones que no sean esenciales para reducir las posibles
+vulnerabilidades del sistema.
+Restrinja los servicios locales a los servicios necesarios para la operación.
+Implemente un sistema de protección para el desbordamiento del búfer.
+Para ello, es posible que necesite sottware de terceros
+<br><br><b> - Registro y supervisión</b><br><br> 
+Registre los eventos relacionados con la seguridad. incluidos los inicios de
+sesión satisfactorios y fallidos, los cierres de sesión y los cambios en los permisos de
+usuario
+Supervise los archivos de registro del sistema
+Utilice un servidor de hora para ajustar la hora con el fin de realizar tareas de diagnóstico.
+Protela los archivos de registro del sistema restringiendo los permisos de
+acceso a ellos.
+Proteja el archivo de configuración de registro, el archivo de configuración contiene valores que, si se cambian, pueden poner en peligro la fiabilidad del sistema de registro
+<br><br><b>  - Integridad del sistema</b><br><br> 
+Cree sistemas de produccion a partir de un proceso conocido y repetible para
+garantizar la integridad del sistema.
+Compruebe los sistemas periódicamente con instantaneas del sistema original.
+Utilice software de auditoria de terceros disponible para comprobar la
+integridad del sistema.
+Realice regularmente copias de seguridad de los recursos del sistema.
+
+
+</p>
+
+        <h3 style="text-align: left; margin-top: 20px;">Referencias Bibliográficas</h3><br>
+        <ul style="text-align: left;">
+            <p> - SEGURIDAD Y PROTECCION DE LOS
+SISTEMAS OPERATIVOS
+Nuñez, Richard; 
+Barcelona marzo 2007</p><br>
+        
+        </ul>
+
+    </div>
+</article>
+ 
+
+    </main>
+
+    <footer class="footer">
+        <p style="color: #ffffff;">&copy; 2025 Seguridad en sistemas operativos. </p>
+    </footer>
+
+</body>
+</html>

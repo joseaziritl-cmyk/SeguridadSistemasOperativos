@@ -1,0 +1,494 @@
+/* --------------------
+   1. VARIABLES Y RESET
+   -------------------- */
+:root {
+    --color-primary: #5A67F5; /* Azul moderno */
+    --color-secondary: #00C891; /* Verde menta */
+    --color-text: #333333;
+    --color-light-bg: #f5f7fa; /* Gris claro */
+    --color-card-bg: #ffffff;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--color-light-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+/* Importar una fuente moderna (opcional, si usas Google Fonts) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+
+.blog-header {
+    background-color: #ffffff; /* Color de fondo muy claro, casi blanco */
+    padding: 30px 20px; /* Relleno superior e inferior amplio */
+    text-align: center; /* Centrar todo el contenido */
+    border-bottom: 4px solid #007bff; /* Un borde inferior de color primario (azul moderno) */
+    font-family: 'Poppins', sans-serif; /* Usar una fuente moderna */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra para darle profundidad */
+}
+
+.header-content {
+    /* Opcional: limitar el ancho para que el texto no se extienda demasiado en pantallas grandes */
+    max-width:780px; 
+    margin: 0 auto;
+}
+
+.blog-title {
+    font-size: 2.5em; /* Título grande */
+    color: #333; /* Color de texto oscuro para buen contraste */
+    margin-bottom: 10px; /* Espacio entre el título y el subtítulo */
+    font-weight: 700; /* Negrita para un impacto moderno */
+    letter-spacing: -0.5px; /* Ajuste sutil del espaciado de letras */
+}
+
+.blog-subtitle {
+    font-size: 1.1em; /* Subtítulo legible */
+    color: #6c757d; /* Gris sutil para el texto secundario */
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Para un toque más minimalista y elegante: */
+@media (max-width: 600px) {
+    .blog-title {
+        font-size: 1.8em;
+    }
+    .blog-header {
+        padding: 20px 10px;
+    }
+}
+/*
+  ==========================================
+  ESTILOS GENERALES Y FUENTES
+  ==========================================
+*/
+/* Importar una fuente moderna (ej: Poppins de Google Fonts) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
+
+body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+  ==========================================
+  ESTILOS DE LA NAVBAR (AZUL OSCURO Y BLANCO)
+  ==========================================
+*/
+
+.navbar-modern {
+    background-color:#5A67F5;; /* Un azul oscuro, limpio y profesional */
+    color: white; /* Color de texto predeterminado para la navbar */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenedor del Título y Subtítulo */
+.navbar-brand {
+    display: flex;
+    flex-direction: column; 
+    gap: 2px;
+}
+
+.nav-title {
+    font-size: 1.25em; 
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff; /* Blanco puro para el título */
+}
+
+.nav-authors {
+    font-size: 0.85em;
+    color: #ffffff; /* Gris muy claro para el texto secundario (mejor legibilidad sobre azul) */
+}
+
+/*
+  ==========================================
+  ESTILOS DEL BOTÓN (MINIMALISTA Y BLANCO)
+  ==========================================
+*/
+
+.nav-button {
+    text-decoration: none;
+    color: #ffffff; /* Texto del botón blanco */
+    padding: 8px 15px; 
+    border: 2px solid #ffffff; /* Borde del botón blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; 
+    background-color: transparent; 
+}
+
+.nav-button:hover {
+    background-color: #007bff; /* Un azul más brillante al pasar el mouse */
+    color: white; /* Mantiene el texto blanco */
+    border-color: #007bff; /* Borde se vuelve azul brillante */
+}
+
+/*
+  ==========================================
+  RESPONSIVE (Ajuste para móviles)
+  ==========================================
+*/
+
+@media (max-width: 768px) {
+    .navbar-modern {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px;
+    }
+
+    .nav-title {
+        font-size: 1em;
+    }
+}
+/* --------------------
+   2. LAYOUT GENERAL
+   -------------------- */
+.main-content {
+    max-width: 1280px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.main-content {
+    max-width: 1280px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* --------------------
+   3. ENCABEZADO Y PIE
+   -------------------- */
+.header {
+    background-color: var(--color-card-bg);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--color-primary); /* Línea moderna */
+}
+
+.header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-weight: 300;
+    color: #6c757d;
+}
+.footerText {
+    color: #ffffff;
+
+}
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    background-color: #2c3e50;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+/* --------------------
+   4. ESTILOS DE TARJETA (CARD)
+   -------------------- */
+.card, .card-destacada {
+    background-color: var(--color-card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .card-destacada:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --------------------
+   5. ARTÍCULO PRINCIPAL
+   -------------------- */
+.articulo-principal {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.articulo-principal img {
+    height: 400px; /* Altura fija para el principal */
+}
+
+.articulo-principal .contenido-articulo {
+    padding: 35px;
+}
+
+.articulo-principal h2 {
+    font-size: 2.2em;
+    color: var(--color-text);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* --------------------
+   6. ARTÍCULOS SECUNDARIOS (GRID)
+   -------------------- */
+.articulos-secundarios {
+    display: grid;
+    /* 3 columnas para escritorio, mínimo 350px por tarjeta */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px; /* Espacio entre los artículos */
+}
+
+.articulo-secundario img {
+    height: 200px; /* Altura fija para los secundarios */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.articulo-secundario h3 {
+    font-size: 1.4em;
+    color: var(--color-text);
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+/* --------------------
+   7. ELEMENTOS DE ESTILO
+   -------------------- */
+
+/* Metadatos (Autor, Fecha) */
+.meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+.meta2 {
+    font-size: 1.2em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+
+/* Etiquetas (Tags) */
+.tag {
+    display: inline-block;
+    background-color: var(--color-secondary); /* Verde menta */
+    color: white;
+    font-size: 0.75em;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.principal-tag {
+    background-color: var(--color-primary); /* Azul principal para destacar */
+}
+
+/* Botón CTA Principal */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #4a54c6;
+}
+
+/* Enlace CTA Secundario */
+.cta-link {
+    display: inline-block;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 3px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.cta-link:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+/* --------------------
+   8. MEDIA QUERIES (RESPONSIVE)
+   -------------------- */
+
+@media (min-width: 1024px) {
+    /* En pantallas grandes, el principal se divide en imagen y texto */
+    .articulo-principal {
+        flex-direction: row;
+    }
+    .articulo-principal img {
+        width: 50%;
+        height: auto;
+        border-radius: 12px 0 0 12px;
+    }
+    .articulo-principal .contenido-articulo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .articulos-secundarios {
+        /* En tabletas y móviles, baja a 2 o 1 columna */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .header h1 {
+        font-size: 2.5em;
+    }
+    .articulo-principal img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* En pantallas grandes, el principal se divide en imagen y texto */
+    .articulo {
+        flex-direction: row;
+    }
+    .articulo img {
+        width: 50%;
+        height: auto;
+        border-radius: 12px 0 0 12px;
+    }
+    .articulo .contenido-arti {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .header h1 {
+        font-size: 2.5em;
+    }
+    .articulo img {
+        height: 250px;
+    }
+}
+.articulo {
+    /* MODIFIED: Increased max-width to make it slightly wider (e.g., from 800px to 950px) */
+    max-width: 950px; 
+    /* NEW: Set the background color to white */
+    background-color: white; 
+    
+    /* Centering the container on the page */
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-bottom: 50px;
+    display: flex; 
+    flex-direction: column;
+    
+    /* Centering the content items *within* the article */
+    align-items: center; 
+    
+    /* Styling to prevent "jump" on hover */
+    border: 1px solid transparent; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 8px; /* Optional: adds nice rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow for lift */
+}
+
+/* Hover state for a smooth lift effect */
+
+
+
+.articulo .contenido-arti {
+    padding: 35px;
+    width: 100%; 
+    text-align: center; /* Centers text content */
+}
+
+.articulo h2 {
+    font-size: 2.2em;
+    color: var(--color-text);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+/* ... (Previous CSS styles for media query and .articulo container) ... */
+
+/* We keep .articulo as display: flex; and align-items: center; 
+   This centers the image (a direct child) horizontally. */
+.articulo {
+    max-width: 950px; 
+    background-color: white; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /* THIS CENTERS ALL DIRECT CHILDREN (including the image) */
+    /* ... (rest of the styles) ... */
+}
+
+/* Hover state for a smooth lift effect */
+
+.articulo img {
+    /* MODIFIED: Set to 60% width to be as wide as the article container */
+    width: 60%; 
+    
+    /* NEW: Makes the image a block-level element */
+    display: block;
+    
+    /* NEW: Centers the block-level image horizontally */
+    margin: 0 auto; 
+    
+    /* The height remains fixed, but you can remove this if you want it to scale freely: */
+    height: 300px; 
+    
+    /* Optional: Rounded corners for the top of the image */
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+}
+
+/* ... (Rest of the CSS styles) ... */
+/* Aplica el estilo a todos los párrafos (p) */
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Opcional: para mejor visualización */
+    color: #333;   /* Opcional: color de texto */
+  }

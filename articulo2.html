@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Moderno y Minimalista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<header class="navbar-modern">
+    <div class="navbar-brand">
+        <h1 class="nav-title">Blog Unidad 9: Seguridad en Sistemas Operativos</h1>
+        <span class="nav-authors">Realizado por: José Zirit, Juan Zarraga, José Chirino y Ricardo Montilla</span>
+    </div>
+    
+    <nav class="navbar-nav">
+        <a href="index.html" class="nav-button">Inicio</a>
+    </nav>
+</header>
+
+    <main class="main-content">
+        
+       <article class="articulo ">
+    <div class="contenido-arti">
+        
+        <h2>Amenazas de Seguridad en Red y Métodos de Defensa Basados en el Modelo STRIDE
+</h2>
+        <br>
+        <img src="https://www.datasunrise.com/wp-content/uploads/2024/04/STRIDE-Threat-Model.webp" alt="Imagen del artículo principal"><br>
+        <p class="meta2">Por José Chirino | Octubre 24, 2025</p><br>
+        
+        <p style="text-align: justify;">La seguridad de las redes modernas es un desafío constante que exige la identificación sistemática de vulnerabilidades y la implementación de mecanismos de defensa robustos. En este contexto, el modelo STRIDE emerge como una herramienta fundamental para clasificar y entender las amenazas de seguridad, proporcionando una estructura para el diseño de soluciones de mitigación. El acrónimo STRIDE agrupa seis categorías principales de amenazas: Suplantación (Spoofing), Manipulación (Tampering), Repudio (Repudiation), Revelación de Información (Information Disclosure), Denegación de Servicio (Denial of Service) y Elevación de Privilegios (Elevation of Privilege). La correcta aplicación de este modelo, junto con tecnologías como IPsec, permite construir una arquitectura de seguridad por capas.
+
+Una de las amenazas más persistentes es la Suplantación de Identidad. Esta se centra en obtener y utilizar credenciales de autenticación ajenas para acceder ilegalmente a recursos. Dentro de esta categoría, el ataque de Intermediario (Man-in-the-Middle) es una técnica sofisticada donde un atacante se interpone en la comunicación entre dos equipos, suplantando su identidad para leer o modificar mensajes sin que los usuarios lo perciban. Asimismo, la comunicación entre hosts de confianza y hosts no confiables representa un riesgo significativo de suplantación si no existen políticas estrictas. La contramedida más efectiva reside en el uso de IPsec, cuyo mecanismo basado en directivas de seguridad requiere una autenticación rigurosa al inicio de la negociación, lo que neutraliza la mayoría de los intentos de imitación.
+
+La Manipulación de Datos se refiere a la modificación malintencionada de información, ya sea a través de la desfiguración de sitios web, la alteración de bases de datos o el cambio de datos en tránsito. <br> <br>Un ejemplo de manipulación es el secuestro de sesión, donde un atacante, una vez que el usuario legítimo ha sido autenticado y autorizado, toma el control de la sesión activa para ejercer sus privilegios. Aunque contraseñas robustas y mecanismos de autenticación bien diseñados dificultan el espionaje, el secuestro de sesión ataca directamente la conexión. Por su parte, la protección ofrecida por IPsec, al implementar cifrado o autenticación de extremo a extremo, resguarda los datos y la integridad de la sesión, frustrando el secuestro y la manipulación.
+
+El Repudio, si bien no es un ataque directo, es una falla crítica en la capacidad de rastreo del sistema. Ocurre cuando un usuario niega haber ejecutado una acción sin que exista prueba en contrario. El concepto de No Repudio es crucial para la seguridad transaccional, exigiendo que el sistema mantenga registros inmutables o requiera evidencias físicas (como firmas de recibo) que demuestren la participación del usuario en una operación.
+
+En cuanto a la Revelación de Información, esta abarca cualquier divulgación de datos a individuos sin autorización. Puede manifestarse como conexiones no autorizadas o, de forma más insidiosa, como el espionaje de redes (sniffing). Los atacantes captan el tráfico para obtener archivos o credenciales, explotando protocolos obsoletos que transmiten contraseñas en texto plano. Las directivas de red que confían únicamente en la dirección IP son insuficientes. Aquí, IPsec vuelve a ser esencial al permitir a los administradores establecer reglas que exigen una negociación de seguridad exitosa antes de conceder acceso a aplicaciones específicas. Más aún, al utilizar el cifrado de IPsec, los datos en tránsito se vuelven ilegibles para cualquier intruso, ofreciendo una defensa robusta contra el espionaje.
+
+<br> <br>Finalmente, la Denegación de Servicio (DoS) y su versión distribuida (DDoS) son amenazas dirigidas a inutilizar un host o red al desbordarlo con tráfico. En los DDoS, una red de equipos comprometidos, denominados zombies, se coordina para saturar un objetivo. Aunque los ataques iniciados dentro de la red aún podrían ser efectivos, IPsec mitiga la mayoría de los ataques DDoS basados en Internet al requerir una autenticación que impone un costo computacional y al permitir a los operadores de red distinguir entre el tráfico legítimo importante (cifrado con IPsec) y el tráfico de ataque, habilitando políticas de gestión de ancho de banda más sofisticadas.
+
+En la cima de la pirámide de las amenazas se encuentra la Elevación de Privilegios, la meta de todo atacante. En este escenario, el intruso logra superar todas las defensas del sistema para obtener un acceso privilegiado que le permite comprometer o destruir el entorno por completo.
+
+En conclusión, el modelo STRIDE ofrece un marco conceptual indispensable para que los arquitectos de seguridad puedan auditar y fortalecer sus sistemas. La implementación estratégica de IPsec en la red aborda de manera directa y efectiva las amenazas de suplantación, manipulación, y revelación de información a través de la autenticación y el cifrado. Sin embargo, la seguridad no es una solución única, sino un proceso continuo de diseño de políticas que, al basarse en modelos como STRIDE, garantiza que cada vector de ataque potencial reciba una defensa adecuada.
+</p>
+
+        <h3 style="text-align: left; margin-top: 20px;">Referencias Bibliográficas</h3><br>
+        <ul style="text-align: left;">
+            <p>- Seguridad en los Sistemas Operativos
+Gabriela Mojsiejczuk 
+Argentina; 2007</p><br>
+        
+        </ul>
+
+    </div>
+</article>
+ 
+
+    </main>
+
+    <footer class="footer">
+        <p style="color: #ffffff;">&copy; 2025 Seguridad en sistemas operativos. </p>
+    </footer>
+
+</body>
+</html>
